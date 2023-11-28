@@ -44,11 +44,7 @@ def create_misp_event(misp):
         event.distribution = 1
         event.threat_level_id = 2
         event.analysis = 0
-        event.add_tag("tlp:amber")
-        event.add_tag("originalSource:CTI")
         event.add_tag("URLHaus/abuse.ch")
-        event.add_tag('admiralty-scale:source-reliability="b"')
-        event.add_tag('misp:event-type="automatic-analysis"')
         event.add_tag("opendir")
 
         result = misp.add_event(event)
@@ -100,11 +96,7 @@ def add_file_to_misp_event(misp, event_id, file_dir, filename):
             'data': b64_data,
             'comment': formatted_comment,
             'Tag': [
-                {"name": "tlp:amber"},
-                {'name': 'originalSource:CTI'},
                 {"name": "URLHaus/abuse.ch"},
-                {'name': 'admiralty-scale:source-reliability="b"'},
-                {'name': 'misp:event-type="automatic-analysis"'},
                 {"name": "opendir"}
             ]
         }
