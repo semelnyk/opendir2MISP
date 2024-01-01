@@ -18,6 +18,6 @@ MISP Configuration: You need to provide the configuration for your MISP instance
 
 ## How to Run
 ```
-python3 malware_downloader.py
+python3 opendirParser.py
 ```
 The script will fetch files from open directories and exclude those flagged as malicious by VirusTotal. After successfully downloading the files, it will automatically trigger the execution of push2MISP.py. Note: You do not need to manually run push2MISP.py as it will be executed automatically upon completing the download process.
